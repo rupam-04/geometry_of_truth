@@ -17,9 +17,9 @@ The `neg_cities` dataset supplements probe training for the intervention experim
 Use Python 3.11, gated Hugging Face access to Llama-2, and a GPU environment compatible with bitsandbytes 8-bit loading. Run from the project directory:
 
 ```bash
-conda create -n geometry_of_truth python=3.11.15 pip -y
+conda create -n geometry_of_truth python=3.11.15 -y
 conda activate geometry_of_truth
-python -m pip install -r requirements.txt
+uv pip install --python "$CONDA_PREFIX/bin/python" -r requirements.txt
 python -m ipykernel install --user --name geometry-of-truth --display-name 'Geometry of Truth'
 export HF_TOKEN='<your Hugging Face access token>'
 ```
